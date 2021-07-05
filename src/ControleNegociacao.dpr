@@ -5,7 +5,9 @@ uses
   uPrincipal in 'uPrincipal.pas' {frmPrincipal},
   uConexao in 'uConexao.pas' {DMConexao: TDataModule},
   uFrameCadastroProdutor in 'uFrameCadastroProdutor.pas' {FrameCadastroProdutor: TFrame},
-  uDMCadastroProdutor in 'uDMCadastroProdutor.pas' {DMCadastroProdutor: TDataModule};
+  uDMCadastroProdutor in 'uDMCadastroProdutor.pas' {DMCadastroProdutor: TDataModule},
+  uFrameCadastroDistribuidora in 'uFrameCadastroDistribuidora.pas' {FrameCadastroDistribuidora: TFrame},
+  uFrameCadastroProduto in 'uFrameCadastroProduto.pas' {FrameCadastroProduto: TFrame};
 
 {$R *.res}
 
