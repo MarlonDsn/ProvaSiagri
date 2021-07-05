@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2021/05/24 09:10:04.000.705,=C:\Users\MARLON\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/06/02 11:17:26.000.140,=C:\Users\MARLON\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/06/04 09:01:03.000.219,=C:\Users\MARLON\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/06/29 17:26:38.000.910,=C:\Users\MARLON\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/07/04 12:33:28.000.453,=C:\Users\MARLON\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/07/04 21:16:11.000.697,C:\Users\MARLON\Documents\Embarcadero\Studio\Projects\Unit1.dfm=D:\siagri\src\uPrincipal.dfm</Transaction>
+    <Transaction>2021/07/04 21:16:11.000.697,C:\Users\MARLON\Documents\Embarcadero\Studio\Projects\Unit1.pas=D:\siagri\src\uPrincipal.pas</Transaction>
+    <Transaction>2021/07/04 21:16:23.000.146,C:\Users\MARLON\Documents\Embarcadero\Studio\Projects\Project1.dproj=D:\siagri\src\ControleNegociacao.dproj</Transaction>
+    <Transaction>2021/07/04 21:23:04.000.614,=D:\siagri\src\Unit1.pas</Transaction>
+    <Transaction>2021/07/04 21:45:19.000.031,D:\siagri\src\Unit1.pas=D:\siagri\src\uConexao.pas</Transaction>
+    <Transaction>2021/07/04 21:45:19.000.031,D:\siagri\src\Unit1.dfm=D:\siagri\src\uConexao.dfm</Transaction>
+  </Transactions>
+	<ActiveMobileDevice>
+		<NoProfile iOSSimulator="iPhone5"/>
+	</ActiveMobileDevice>
+</BorlandProject>
