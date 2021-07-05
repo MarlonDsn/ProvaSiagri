@@ -25,10 +25,6 @@ object frmPrincipal: TfrmPrincipal
     Color = clWhite
     ParentBackground = False
     TabOrder = 0
-    ExplicitLeft = 408
-    ExplicitTop = 328
-    ExplicitWidth = 185
-    ExplicitHeight = 41
     object Panel2: TPanel
       Left = 0
       Top = 49
@@ -39,7 +35,6 @@ object frmPrincipal: TfrmPrincipal
       Color = 6908265
       ParentBackground = False
       TabOrder = 0
-      ExplicitHeight = 612
       object SpeedButton1: TSpeedButton
         AlignWithMargins = True
         Left = 5
@@ -116,7 +111,6 @@ object frmPrincipal: TfrmPrincipal
       Color = 6908265
       ParentBackground = False
       TabOrder = 1
-      ExplicitWidth = 984
       object Image1: TImage
         Left = 0
         Top = 0
@@ -445,10 +439,6 @@ object frmPrincipal: TfrmPrincipal
       Align = alClient
       BevelOuter = bvNone
       TabOrder = 2
-      ExplicitLeft = 132
-      ExplicitTop = 55
-      ExplicitWidth = 855
-      ExplicitHeight = 612
     end
   end
 end

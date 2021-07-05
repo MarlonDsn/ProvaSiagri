@@ -103,7 +103,17 @@
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="uConexao.pas">
-            <Form>DataModule1</Form>
+            <Form>DMConexao</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="uFrameCadastroProdutor.pas">
+            <Form>FrameCadastroProdutor</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TFrame</DesignClass>
+        </DCCReference>
+        <DCCReference Include="uDMCadastroProdutor.pas">
+            <Form>DMCadastroProdutor</Form>
             <FormType>dfm</FormType>
             <DesignClass>TDataModule</DesignClass>
         </DCCReference>

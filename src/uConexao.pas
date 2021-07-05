@@ -8,9 +8,9 @@ uses
   FireDAC.Comp.Client, FireDAC.Phys.FBDef, FireDAC.Phys.IBBase, FireDAC.Phys.FB;
 
 type
-  TDataModule1 = class(TDataModule)
+  TDMConexao = class(TDataModule)
     FDConnection: TFDConnection;
-    FDPhysFBDriverLink1: TFDPhysFBDriverLink;
+    FDPhysFBDriverLink: TFDPhysFBDriverLink;
   private
     { Private declarations }
   public
@@ -18,7 +18,7 @@ type
   end;
 
 var
-  DataModule1: TDataModule1;
+  DMConexao: TDMConexao;
 
 implementation
 
