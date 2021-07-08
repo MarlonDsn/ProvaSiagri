@@ -3,6 +3,7 @@ object FrameCadastroProdutor: TFrameCadastroProdutor
   Top = 0
   Width = 870
   Height = 650
+  Align = alClient
   TabOrder = 0
   object PanelPrincipal: TPanel
     Left = 0
@@ -12,7 +13,6 @@ object FrameCadastroProdutor: TFrameCadastroProdutor
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 0
-    ExplicitTop = -3
     object Label1: TLabel
       AlignWithMargins = True
       Left = 3
@@ -41,17 +41,16 @@ object FrameCadastroProdutor: TFrameCadastroProdutor
       Color = 13092807
       ParentBackground = False
       TabOrder = 0
-      ExplicitTop = 603
-      object SpeedButton1: TSpeedButton
+      object btnGravar: TSpeedButton
         AlignWithMargins = True
-        Left = 707
-        Top = 10
+        Left = 677
+        Top = 5
         Width = 153
-        Height = 30
+        Height = 40
         Margins.Left = 10
-        Margins.Top = 10
-        Margins.Right = 10
-        Margins.Bottom = 10
+        Margins.Top = 5
+        Margins.Right = 40
+        Margins.Bottom = 5
         Align = alRight
         Caption = 'Confirmar'
         Flat = True
@@ -61,20 +60,21 @@ object FrameCadastroProdutor: TFrameCadastroProdutor
         Font.Name = 'Segoe UI Semibold'
         Font.Style = []
         ParentFont = False
+        OnClick = btnGravarClick
         ExplicitLeft = 696
         ExplicitTop = 8
         ExplicitHeight = 38
       end
-      object SpeedButton2: TSpeedButton
+      object btnCancelar: TSpeedButton
         AlignWithMargins = True
-        Left = 534
-        Top = 10
+        Left = 504
+        Top = 5
         Width = 153
-        Height = 30
+        Height = 40
         Margins.Left = 10
-        Margins.Top = 10
+        Margins.Top = 5
         Margins.Right = 10
-        Margins.Bottom = 10
+        Margins.Bottom = 5
         Align = alRight
         Caption = 'Cancelar'
         Flat = True
@@ -84,6 +84,7 @@ object FrameCadastroProdutor: TFrameCadastroProdutor
         Font.Name = 'Segoe UI Semibold'
         Font.Style = []
         ParentFont = False
+        OnClick = btnCancelarClick
         ExplicitLeft = 696
         ExplicitTop = 8
         ExplicitHeight = 38
@@ -109,7 +110,6 @@ object FrameCadastroProdutor: TFrameCadastroProdutor
       Font.Style = []
       ParentFont = False
       TabOrder = 1
-      ExplicitLeft = 17
       object Label2: TLabel
         Left = 16
         Top = 16
@@ -137,8 +137,9 @@ object FrameCadastroProdutor: TFrameCadastroProdutor
         Width = 177
         Height = 29
         CharCase = ecUpperCase
+        Enabled = False
         TabOrder = 0
-        TextHint = '000001'
+        TextHint = '000000'
       end
       object edtNomeProdutor: TEdit
         Left = 201
@@ -147,7 +148,8 @@ object FrameCadastroProdutor: TFrameCadastroProdutor
         Height = 29
         CharCase = ecUpperCase
         TabOrder = 1
-        TextHint = 'NOME DO PRODUTOR...'
+        TextHint = 'NOME DO PRODUTOR'
+        OnKeyDown = edtNomeProdutorKeyDown
       end
       object edtCPFCNPJ: TEdit
         Left = 16
@@ -156,7 +158,9 @@ object FrameCadastroProdutor: TFrameCadastroProdutor
         Height = 29
         CharCase = ecUpperCase
         TabOrder = 2
-        TextHint = 'CPF OU CNPJ...'
+        TextHint = '000.000.000-00'
+        OnExit = edtCPFCNPJExit
+        OnKeyDown = edtCPFCNPJKeyDown
       end
       object PanelPrincipalLimite: TPanel
         AlignWithMargins = True
@@ -198,9 +202,6 @@ object FrameCadastroProdutor: TFrameCadastroProdutor
           Color = 13092807
           ParentBackground = False
           TabOrder = 0
-          ExplicitLeft = 0
-          ExplicitTop = 30
-          ExplicitHeight = 360
           object Panel2: TPanel
             AlignWithMargins = True
             Left = 3
@@ -227,16 +228,16 @@ object FrameCadastroProdutor: TFrameCadastroProdutor
               Height = 21
               Caption = 'Limite de cr'#233'dito:'
             end
-            object SpeedButton3: TSpeedButton
+            object btnAdicionarLimite: TSpeedButton
               AlignWithMargins = True
-              Left = 636
-              Top = 10
-              Width = 153
-              Height = 37
+              Left = 646
+              Top = 5
+              Width = 143
+              Height = 47
               Margins.Left = 10
-              Margins.Top = 10
+              Margins.Top = 5
               Margins.Right = 10
-              Margins.Bottom = 10
+              Margins.Bottom = 5
               Align = alRight
               Caption = 'Adicionar'
               Flat = True
@@ -246,15 +247,23 @@ object FrameCadastroProdutor: TFrameCadastroProdutor
               Font.Name = 'Segoe UI Semibold'
               Font.Style = []
               ParentFont = False
-              ExplicitTop = 11
+              OnClick = btnAdicionarLimiteClick
+              ExplicitTop = 10
+              ExplicitHeight = 37
             end
             object cbxDistribuidora: TDBLookupComboBox
               Left = 0
               Top = 25
               Width = 473
               Height = 29
+              DataField = 'FKIDDISTRIBUIDORA'
+              DataSource = DMCadastroProdutor.dsProdutorLimite
+              KeyField = 'ID'
+              ListField = 'NOME'
+              ListSource = DMCadastroProdutor.dsDistribuidora
               NullValueKey = 48
               TabOrder = 0
+              OnKeyDown = cbxDistribuidoraKeyDown
             end
             object edtLimiteCredito: TEdit
               Left = 487
@@ -262,8 +271,10 @@ object FrameCadastroProdutor: TFrameCadastroProdutor
               Width = 146
               Height = 29
               CharCase = ecUpperCase
+              NumbersOnly = True
               TabOrder = 1
-              Text = '0,00'
+              TextHint = '0,00'
+              OnKeyDown = edtLimiteCreditoKeyDown
             end
           end
           object DBGrid1: TDBGrid
@@ -272,12 +283,29 @@ object FrameCadastroProdutor: TFrameCadastroProdutor
             Width = 805
             Height = 301
             Align = alClient
+            DataSource = DMCadastroProdutor.dsProdutorLimite
+            Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgTabs, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
             TabOrder = 1
             TitleFont.Charset = DEFAULT_CHARSET
             TitleFont.Color = clWindowText
             TitleFont.Height = -16
             TitleFont.Name = 'Segoe UI'
             TitleFont.Style = []
+            Columns = <
+              item
+                Expanded = False
+                FieldName = 'NOME'
+                Title.Caption = 'Distribuidora'
+                Width = 600
+                Visible = True
+              end
+              item
+                Expanded = False
+                FieldName = 'VALOR'
+                Title.Caption = 'Limite'
+                Width = 150
+                Visible = True
+              end>
           end
         end
       end

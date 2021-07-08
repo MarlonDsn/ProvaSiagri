@@ -12,7 +12,6 @@ object FrameCadastroProduto: TFrameCadastroProduto
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 0
-    ExplicitTop = -3
     object Label1: TLabel
       AlignWithMargins = True
       Left = 3
@@ -41,7 +40,7 @@ object FrameCadastroProduto: TFrameCadastroProduto
       Color = 13092807
       ParentBackground = False
       TabOrder = 0
-      object SpeedButton1: TSpeedButton
+      object btnConfirmar: TSpeedButton
         AlignWithMargins = True
         Left = 707
         Top = 10
@@ -60,11 +59,12 @@ object FrameCadastroProduto: TFrameCadastroProduto
         Font.Name = 'Segoe UI Semibold'
         Font.Style = []
         ParentFont = False
+        OnClick = btnConfirmarClick
         ExplicitLeft = 696
         ExplicitTop = 8
         ExplicitHeight = 38
       end
-      object SpeedButton2: TSpeedButton
+      object btnCancelar: TSpeedButton
         AlignWithMargins = True
         Left = 534
         Top = 10
@@ -83,6 +83,7 @@ object FrameCadastroProduto: TFrameCadastroProduto
         Font.Name = 'Segoe UI Semibold'
         Font.Style = []
         ParentFont = False
+        OnClick = btnCancelarClick
         ExplicitLeft = 696
         ExplicitTop = 8
         ExplicitHeight = 38
@@ -129,12 +130,13 @@ object FrameCadastroProduto: TFrameCadastroProduto
         Height = 21
         Caption = 'Nome:'
       end
-      object edtCPFCNPJ: TEdit
+      object edtPreco: TEdit
         Left = 16
         Top = 107
         Width = 177
         Height = 29
         CharCase = ecUpperCase
+        NumbersOnly = True
         TabOrder = 0
         TextHint = '0,00'
       end
@@ -144,6 +146,7 @@ object FrameCadastroProduto: TFrameCadastroProduto
         Width = 177
         Height = 29
         CharCase = ecUpperCase
+        Enabled = False
         TabOrder = 1
         TextHint = '000001'
       end
@@ -155,6 +158,7 @@ object FrameCadastroProduto: TFrameCadastroProduto
         CharCase = ecUpperCase
         TabOrder = 2
         TextHint = 'NOME DO PRODUTO...'
+        OnKeyDown = edtNomeProdutorKeyDown
       end
     end
   end

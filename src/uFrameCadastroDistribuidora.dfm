@@ -3,6 +3,7 @@ object FrameCadastroDistribuidora: TFrameCadastroDistribuidora
   Top = 0
   Width = 870
   Height = 650
+  Align = alClient
   TabOrder = 0
   object PanelPrincipal: TPanel
     Left = 0
@@ -12,7 +13,6 @@ object FrameCadastroDistribuidora: TFrameCadastroDistribuidora
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 0
-    ExplicitTop = -3
     object Label1: TLabel
       AlignWithMargins = True
       Left = 3
@@ -41,7 +41,7 @@ object FrameCadastroDistribuidora: TFrameCadastroDistribuidora
       Color = 13092807
       ParentBackground = False
       TabOrder = 0
-      object SpeedButton1: TSpeedButton
+      object btnGravar: TSpeedButton
         AlignWithMargins = True
         Left = 707
         Top = 10
@@ -60,11 +60,12 @@ object FrameCadastroDistribuidora: TFrameCadastroDistribuidora
         Font.Name = 'Segoe UI Semibold'
         Font.Style = []
         ParentFont = False
+        OnClick = btnGravarClick
         ExplicitLeft = 696
         ExplicitTop = 8
         ExplicitHeight = 38
       end
-      object SpeedButton2: TSpeedButton
+      object btnCancelar: TSpeedButton
         AlignWithMargins = True
         Left = 534
         Top = 10
@@ -83,6 +84,7 @@ object FrameCadastroDistribuidora: TFrameCadastroDistribuidora
         Font.Name = 'Segoe UI Semibold'
         Font.Style = []
         ParentFont = False
+        OnClick = btnCancelarClick
         ExplicitLeft = 696
         ExplicitTop = 8
         ExplicitHeight = 38
@@ -137,6 +139,7 @@ object FrameCadastroDistribuidora: TFrameCadastroDistribuidora
         CharCase = ecUpperCase
         TabOrder = 0
         TextHint = 'CPF OU CNPJ...'
+        OnExit = edtCPFCNPJExit
       end
       object edtCodigo: TEdit
         Left = 16
@@ -155,6 +158,7 @@ object FrameCadastroDistribuidora: TFrameCadastroDistribuidora
         CharCase = ecUpperCase
         TabOrder = 2
         TextHint = 'NOME DA DISTRIBUIDORA...'
+        OnKeyDown = edtNomeDistribuidorKeyDown
       end
     end
   end

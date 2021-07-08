@@ -12,7 +12,8 @@ object frmPrincipal: TfrmPrincipal
   Font.Name = 'Segoe UI'
   Font.Style = []
   OldCreateOrder = False
-  WindowState = wsMaximized
+  Position = poScreenCenter
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 17
   object Panel1: TPanel
@@ -35,7 +36,8 @@ object frmPrincipal: TfrmPrincipal
       Color = 6908265
       ParentBackground = False
       TabOrder = 0
-      object SpeedButton1: TSpeedButton
+      ExplicitTop = 55
+      object btnProdutor: TSpeedButton
         AlignWithMargins = True
         Left = 5
         Top = 5
@@ -54,9 +56,10 @@ object frmPrincipal: TfrmPrincipal
         Font.Name = 'Segoe UI Semibold'
         Font.Style = []
         ParentFont = False
+        OnClick = btnProdutorClick
         ExplicitLeft = 2
       end
-      object SpeedButton2: TSpeedButton
+      object btnDistribuidora: TSpeedButton
         AlignWithMargins = True
         Left = 5
         Top = 67
@@ -75,10 +78,11 @@ object frmPrincipal: TfrmPrincipal
         Font.Name = 'Segoe UI Semibold'
         Font.Style = []
         ParentFont = False
+        OnClick = btnDistribuidoraClick
         ExplicitLeft = 10
         ExplicitTop = 141
       end
-      object SpeedButton3: TSpeedButton
+      object btnProduto: TSpeedButton
         AlignWithMargins = True
         Left = 5
         Top = 129
@@ -97,8 +101,55 @@ object frmPrincipal: TfrmPrincipal
         Font.Name = 'Segoe UI Semibold'
         Font.Style = []
         ParentFont = False
+        OnClick = btnProdutoClick
         ExplicitLeft = 2
         ExplicitTop = 179
+      end
+      object btnSair: TSpeedButton
+        AlignWithMargins = True
+        Left = 5
+        Top = 594
+        Width = 119
+        Height = 52
+        Margins.Left = 5
+        Margins.Top = 5
+        Margins.Right = 5
+        Margins.Bottom = 5
+        Align = alBottom
+        Caption = 'Sair'
+        Flat = True
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = 13092807
+        Font.Height = -16
+        Font.Name = 'Segoe UI Semibold'
+        Font.Style = []
+        ParentFont = False
+        OnClick = btnSairClick
+        ExplicitLeft = 10
+        ExplicitTop = 297
+      end
+      object btnNegociacao: TSpeedButton
+        AlignWithMargins = True
+        Left = 5
+        Top = 191
+        Width = 119
+        Height = 52
+        Margins.Left = 5
+        Margins.Top = 5
+        Margins.Right = 5
+        Margins.Bottom = 5
+        Align = alTop
+        Caption = 'Negocia'#231#227'o'
+        Flat = True
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = 13092807
+        Font.Height = -16
+        Font.Name = 'Segoe UI Semibold'
+        Font.Style = []
+        ParentFont = False
+        OnClick = btnNegociacaoClick
+        ExplicitLeft = 2
+        ExplicitTop = 233
       end
     end
     object Panel3: TPanel
