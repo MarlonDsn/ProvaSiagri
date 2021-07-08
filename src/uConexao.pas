@@ -13,6 +13,7 @@ type
     FDConnection: TFDConnection;
     FDPhysFBDriverLink: TFDPhysFBDriverLink;
     FDTransaction: TFDTransaction;
+    procedure DataModuleCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -39,6 +40,14 @@ uses uPrincipal, Vcl.Forms;
 {$R *.dfm}
 
 { TDMConexao }
+
+procedure TDMConexao.DataModuleCreate(Sender: TObject);
+begin
+  with FDConnection.Params as TFDPhysFBConnectionDefParams do
+  begin
+    Database := GetCurrentDir+'\dados.fdb';
+  end;
+end;
 
 procedure TDMConexao.EsconderFrames();
 var

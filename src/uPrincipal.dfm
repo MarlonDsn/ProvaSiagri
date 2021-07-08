@@ -36,7 +36,6 @@ object frmPrincipal: TfrmPrincipal
       Color = 6908265
       ParentBackground = False
       TabOrder = 0
-      ExplicitTop = 55
       object btnProdutor: TSpeedButton
         AlignWithMargins = True
         Left = 5

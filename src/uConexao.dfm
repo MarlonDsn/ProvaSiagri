@@ -1,5 +1,6 @@
 object DMConexao: TDMConexao
   OldCreateOrder = False
+  OnCreate = DataModuleCreate
   Height = 329
   Width = 446
   object FDConnection: TFDConnection
@@ -8,7 +9,6 @@ object DMConexao: TDMConexao
       'User_Name=sysdba'
       'Password=masterkey'
       'Database=D:\siagri\ProvaSiagri\data\DADOS.FDB')
-    Connected = True
     LoginPrompt = False
     Left = 40
     Top = 8
